@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Tabs Options</title>
+	<style>
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+		}
+
+		.type-div {
+			margin: 30px;
+			display: none;
+		}
+
+		.input {
+			height: 40px;
+			background-color: white;
+			width: 300px;
+			border-radius: 5px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+
+		.img {
+			width: 300px;
+			height: 200px;
+			border-radius: 10px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div class="" style="margin-top: 50px;">
+		<div style="margin: 30px;">
+			<label>Set Search Title:</label>
+			<input type="text" class="input" id="searchTitle" placeholder="Happy Every Day">
+		</div>
+		<div style="margin: 30px;">
+			<label>Select Theme Type:</label>
+			<select id="setType" class="input" style="">
+				<option value="default" selected>Default</option>
+				<option value="online-default">Online Default</option>
+				<option value="local">Local Picture</option>
+				<option value="online">Online Picture</option>
+			</select>
+		</div>
+		<div id="default" class="type-div">
+			<img src="image/default.jpg" alt="default" id="defaultImg" class="img"/>
+		</div>
+		<div id="onlineDefault" class="type-div">
+			<label>Select Theme:</label>
+			<select id="themeSelect" class="input">
+				<option value="image/default.jpg" selected>select one theme</option>
+				<option value="http://file.battlenet.top/wow/wow.rand">魔兽世界 | World of Warcraft</option>
+				<option value="http://file.battlenet.top/dota/dota.rand">刀塔 | Dota</option>
+			</select>
+		</div>
+		<div id="local" class="type-div">
+			<div style="margin-bottom: 20px;">
+				<input type="file" id="localFile" multiple accept="image/*" style="display:none">
+				<label for="localFile" class="" style="display: inline-block;height: 40px;background-color: whitesmoke;cursor: pointer;border-radius: 5px;border: 1px solid #fff3cd;line-height: 40px;padding: 0px 5px;">Select Local Picture</label>
+			</div>
+			<img id="localImg" alt="" class="img"/>
+		</div>
+		<div id="online" class="type-div">
+			<input type="text" class="input" id="onlinePath" placeholder="Input the url path of network image"
+				   style="margin-bottom: 20px; display: block;">
+			<img id="onlineImg" alt="" class="img"/>
+		</div>
+		<div id="bookTab" class="" style="margin: 30px;">
+			<label>How to open Tabs by omnibox：</label>
+			<select id="bookOpenTab" class="input">
+				<option value="current" selected>Open in current tab</option>
+				<option value="new">Open in new tab</option>
+			</select>
+		</div>
+		<div style="margin: 30px;">
+			<button id="btnSave" class=""
+					style="height: 40px;border-radius: 5px;background-color: whitesmoke;cursor: pointer;">Save Options
+			</button>
+			<label id="outmsg"></label>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/options.js"></script>
+</html>
